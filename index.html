@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sign up Form</title>
+  </head>
+  <body>
+    <div class="form-container" id="form-container">
+      <div class="half cover">
+        <div class="cover__sign-message">
+          <h1 class="message-title">Hello, Friend!</h1>
+          <p class="message-content">
+            Enter your personal information and start journey with us.
+          </p>
+        </div>
+        <button class="sign-btn" id="sign-btn">sign up</button>
+      </div>
+      <form class="half form-container">
+        <div class="content-container">
+          <h1 class="form-title">Sign up</h1>
+          <div class="social-media">
+            <button class="social-icon">
+              <i class="fa-brands fa-facebook"></i>
+            </button>
+            <button class="social-icon">
+              <i class="fa-brands fa-instagram"></i>
+            </button>
+            <button class="social-icon">
+              <i class="fa-brands fa-twitter"></i>
+            </button>
+          </div>
+          <p>or use your email for registration</p>
+          <div class="form-actions">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" placeholder="Name" />
+          </div>
+          <div class="form-actions">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" placeholder="Email" />
+          </div>
+          <div class="form-actions">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" placeholder="Password" />
+          </div>
+          <div class="form-btns-container">
+            <button id="submit-btn" class="form-btn submit-btn">sign up</button>
+            <button id="cancel-btn" class="form-btn cancel-btn">sign up</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
