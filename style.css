@@ -70,6 +70,7 @@ body {
   opacity: 0;
   transition: opacity 0.2s ease-in;
 }
+
 .form-container.active .form-content-container {
   opacity: 1;
   transition: opacity 0.1s ease-in 0.4s;
@@ -79,11 +80,18 @@ body {
   height: 100%;
   width: 0%;
   text-align: center;
-
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #333;
+}
+.form .close-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  font-size: 20px;
 }
 .form-title {
   color: #1f8a70;
