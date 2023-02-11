@@ -47,7 +47,8 @@ body {
   padding: 10vh 5vw;
 }
 .cover .sign-message-box {
-  width: 70%;
+  width: 300px;
+  max-width: 80%;
   text-align: center;
 }
 .cover .sign-message-box h1 {
@@ -92,6 +93,11 @@ body {
   right: 30px;
   cursor: pointer;
   font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.1s ease-in 0.2s;
+}
+.form-container.active .close-btn {
+  opacity: 1;
 }
 .form-title {
   color: #1f8a70;
