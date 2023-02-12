@@ -45,6 +45,7 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 10vh 5vw;
+  z-index: 100;
 }
 .cover .sign-message-box {
   width: 300px;
@@ -68,8 +69,9 @@ body {
   padding: 10px 30px;
 }
 .form-content-container {
+  width: 100%;
   opacity: 0;
-  transition: opacity 0.2s ease-in;
+  transition: opacity 0.01s ease-in;
 }
 
 .form-container.active .form-content-container {
@@ -94,10 +96,11 @@ body {
   cursor: pointer;
   font-size: 20px;
   opacity: 0;
-  transition: opacity 0.1s ease-in 0.2s;
+  transition: opacity 0.01s ease-in;
 }
 .form-container.active .close-btn {
   opacity: 1;
+  transition: opacity 0.01s ease-in 0.5s;
 }
 .form-title {
   color: #1f8a70;
@@ -136,6 +139,7 @@ body {
 }
 .form-actions {
   width: 250px;
+  max-width: 95%;
   height: 40px;
   background-color: #ccc;
   margin: 15px auto 0;
@@ -177,4 +181,69 @@ body {
   text-transform: uppercase;
   padding: 10px 30px;
   margin-top: 20px;
+}
+@media (max-width: 600px) {
+  .form-container {
+    flex-direction: column;
+  }
+  .form-container.active .sign-message-box,
+  .form-container.active .sign-btn {
+    opacity: 0;
+    transition: opacity 0.01s ease-in;
+  }
+  .sign-message-box,
+  .sign-btn {
+    opacity: 1;
+    transition: opacity 0.01s ease-in 0.5s;
+  }
+
+  .form-container.active .form {
+    height: 100%;
+    width: 100%;
+  }
+  .form-container.active .form-content-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: opacity 0.2s ease-in 0.5s;
+  }
+  .cover {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+  .form-container.active .cover {
+    height: 0;
+  }
+  .form {
+    width: 100%;
+    padding: 0;
+    height: 0;
+  }
+  .form-content-container {
+    height: 0;
+    transition: opacity 0.01s ease-in;
+  }
+  .half {
+    transition: height 0.5s linear;
+  }
+  .form-container.active .close-btn {
+    opacity: 1;
+    transition: opacity 0.2s ease-in 0.5s;
+  }
+  .form-container .close-btn {
+    transition: opacity 0.01s ease-in;
+  }
+  .form-actions {
+    width: 250px;
+    max-width: 80%;
+    height: 40px;
+  }
+
+  .form-actions input {
+    max-width: 70%;
+  }
 }
